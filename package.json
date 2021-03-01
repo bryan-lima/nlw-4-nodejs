@@ -1,0 +1,8 @@
+{
+  "name": "nlw-4-nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:bryan-lima/nlw-4-nodejs.git",
+  "author": "Bryan <bryanlima200@outlook.com>",
+  "license": "MIT"
+}
