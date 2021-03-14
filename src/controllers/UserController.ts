@@ -20,7 +20,7 @@ class UserController {
         try {
             await schema.validate(request.body, { abortEarly: false });
         } catch(err) {
-            throw new AppError(err, 400);
+            throw new AppError(err);
         }
 
         const usersRepository = getCustomRepository(UsersRepository);
@@ -29,7 +29,7 @@ class UserController {
         const userAlreadyExists = await usersRepository.findOne({ email });
 
         if(userAlreadyExists) {
-            throw new AppError("User already exists!", 400);
+            throw new AppError("User already exists!");
         }
 
         const user = usersRepository.create({ name, email });

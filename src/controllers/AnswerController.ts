@@ -15,7 +15,7 @@ class AnswerController {
         });
 
         if(!surveyUser) {
-            throw new AppError("Survey User does not exists!", 400);
+            throw new AppError("Survey User does not exists!");
         }
 
         surveyUser.value = Number(value);

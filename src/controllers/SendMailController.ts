@@ -18,13 +18,13 @@ class SendMailController {
         const user = await usersRepository.findOne({ email });
 
         if(!user) {
-            throw new AppError("User does not exists!", 400);
+            throw new AppError("User does not exists!");
         }
 
         const survey = await surveysRepository.findOne({ id: survey_id });
 
         if(!survey) {
-            throw new AppError("Survey does not exists!", 400);
+            throw new AppError("Survey does not exists!");
         }
 
         const npsPath = resolve(__dirname, "..", "views", "emails", "npsMail.hbs");
